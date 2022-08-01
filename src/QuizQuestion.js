@@ -5,11 +5,11 @@ class QuizQuestion extends Component {
         return (
             <main>
                 <section>
-                    <p>{this.props.instruction_text}</p>
+                    <p>{this.props.quiz_question.instruction_text}</p>
                 </section>
                 <section className="buttons">
                     <ul>
-                        <li>{this.props.answer_options}</li>
+                        <li>{this.props.quiz_question.answer_options[0]}</li>
                     </ul>
                 </section>
             </main>

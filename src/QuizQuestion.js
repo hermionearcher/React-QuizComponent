@@ -16,20 +16,21 @@ class QuizQuestion extends Component {
             this.setState({ incorrectAnswer: true })
         }
     }
+    
     render() {
         return (
-            <main>
-                { this.state.incorrectAnswer ? <p className="error">Sorry, that's not right.</p> : null}
+            <main className="quiz-question-main">
                 <section>
-                    <p>{this.props.quiz_question.instruction_text}</p>
+                    <h1 className="quiz-question-title">{this.props.quiz_question.instruction_text}</h1>
                 </section>
                 <section className="buttons">
-                    <ul>
+                    <ul className="answer-list">
                         {this.props.quiz_question.answer_options.map((answer_option, index) =>
-                            <QuizQuestionButton key={index} button_text={answer_option} clickHandler={this.handleClick.bind(this)}/>
+                            <QuizQuestionButton key={index} button_text={answer_option} incorrect_answer={this.state.incorrectAnswer} clickHandler={this.handleClick.bind(this)}/>
                         )}
                     </ul>
                 </section>
+                {this.state.incorrectAnswer ? <p className="error">Sorry, that's not right.</p> : null}
             </main>
         )
     }

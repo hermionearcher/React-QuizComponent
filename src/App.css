@@ -36,3 +36,46 @@ button {
 .error {
   color: red;
 }
+
+
+
+/* Components styles here */
+.quiz-question {
+  border: solid red;
+}
+.answer-button {
+  width: 100%;
+  border: #c3dcef solid;
+  text-align: left;
+  background-color: #eff8ff;
+  border-radius: 5px;
+  padding-left: 2vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+i {
+  text-align: right;
+  margin: 0;
+  color: red;
+}
+.button-text {
+    /* align-self: flex-start; */
+    flex-basis: 100%;
+    text-align: left;
+    margin: 0;
+}
+.answer-list {
+  width: 100%;
+  
+}
+.icon-visible {
+  visibility: hidden;
+}
+.quiz-question-main {
+  background-color: white;
+  margin: 10vh;
+  padding: 5vh;
+  border-radius: 5px;
+}
